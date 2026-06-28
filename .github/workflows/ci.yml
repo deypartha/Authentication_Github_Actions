@@ -3,7 +3,7 @@ name: Login App CI
 on:
   push:
     branches:
-      - main
+      - master
 
   pull_request:
     branches:
@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: client
+        working-directory: frontend
 
     steps:
       - uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: server
+        working-directory: backend
 
     steps:
       - uses: actions/checkout@v4
